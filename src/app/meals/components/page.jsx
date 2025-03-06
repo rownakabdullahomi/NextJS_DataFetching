@@ -1,6 +1,5 @@
 import Link from "next/link";
-import MealSearchInput from "./components/MealSearchInput";
-
+import MealSearchInput from "../components/MealSearchInput";
 
 export const metadata = {
   title: "All Meals",
