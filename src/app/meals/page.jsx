@@ -32,14 +32,15 @@ const MealsPage = async ({ searchParams }) => {
         <MealSearchInput />
       </div>
       <div className="grid grid-cols-3 gap-4">
-        {meals.map((meal) => {
+        {meals?.map((meal) => {
           return (
             <div key={meal.idMeal}>
+              <img src={meal?.strMealThumb} alt="" />
               <p>{meal.strMeal}</p>
               <p>{meal.strCategory}</p>
               <p>{meal.strArea}</p>
               <p>{meal.strInstructions}</p>
-              <Link href={`/meals/${SingleMealPage.idMeal}`}>Details</Link>
+              <Link href={`/meals/${meal.idMeal}`}>Details</Link>
             </div>
           );
         })}
